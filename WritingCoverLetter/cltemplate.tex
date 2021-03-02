@@ -20,9 +20,9 @@
 
 \usepackage{fontspec}
 \defaultfontfeatures{Mapping=tex-text}  % Sets quotation marks.
-\setromanfont{Times}
-\setsansfont[BoldFont={Helvetica Neue Bold}]{Helvetica Neue}
-\setmonofont[Scale=MatchLowercase]{Helvetica}
+\setromanfont{Fira Sans Condensed Medium}
+\setsansfont[BoldFont={Fira Sans Condensed Bold}]{Fira Sans Condensed Medium}
+\setmonofont[Scale=MatchLowercase]{Fira Mono Medium}
 
 % From default template
 \providecommand{\tightlist}{%
@@ -37,17 +37,16 @@
         \vspace{-0.375in}
         \parbox[b][0.625in][t]{3.74in}
             {\href{http://www.umich.edu}
-            {\includegraphics[height=1in]{./Michigan.pdf}}}\hfill
+            {\includegraphics[height=0.5in]{./UO.pdf}}}\hfill
         \parbox[b][0.625in][t]{2in}{
             \setlength{\baselineskip}{9pt}
             \fontsize{7pt}{7pt}{
-                \fontspec{Helvetica}
+                \fontspec{Fira Sans Condensed Bold}
                 \textbf{#8}\\
                 {#9}\vspace{6pt}\\
                 #1\\
                 #2, #3 #4\\
                 Phone: #5\\
-                Fax: #6\\
                 Email: \href{mailto:#7}{#7}
                 }
             }
@@ -56,7 +55,7 @@
 
 $if(draft)$
 \usepackage{draftwatermark}
-\SetWatermarkLightness{0.9}
+\SetWatermarkLightness{1}
 $endif$
 
 \begin{document}
@@ -75,7 +74,7 @@ $if(sig.include)$
     \vspace{0.1in}
 
     $if(sig.sign)$
-        \vspace{-0.2in}\includegraphics[height=0.5in]{./Signature.pdf}
+        \vspace{-0.2in}\includegraphics[height=0.001in]{./Signature.pdf}
     $else$
         \\
     $endif$
